@@ -17,273 +17,156 @@
     <meta property="og:url" content="https://volumeduck.com/">
     <meta property="og:image" content="https://volumeduck.com/assets/volume-duck-preview.png">
     <meta name="theme-color" content="#f48a1c">
-    <script>
-      document.documentElement.classList.add("js");
-    </script>
     <link rel="icon" type="image/png" href="assets/volume-duck-icon.png">
     <link rel="apple-touch-icon" href="assets/volume-duck-icon.png">
-    <link rel="preload" as="image" href="assets/volume-duck-preview.png">
+    <link rel="preload" as="image" href="assets/VolumeDuck-hero-image.png">
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div class="page-chrome" aria-hidden="true">
-      <div class="page-glow page-glow-left"></div>
-      <div class="page-glow page-glow-right"></div>
-      <div class="page-grid"></div>
-    </div>
-
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Volume Duck home">
+      <a class="brand" href="#" aria-label="Volume Duck home">
         <img
           class="brand-icon"
           src="assets/volume-duck-icon.png"
           alt="Volume Duck app icon"
-          width="52"
-          height="52"
+          width="40"
+          height="40"
         >
-        <div>
-          <span class="brand-mark">Volume Duck</span>
-          <span class="brand-subtitle">macOS menu bar utility</span>
-        </div>
+        <span class="brand-name">VolumeDuck</span>
+        <span class="brand-version">v1.0</span>
       </a>
 
-      <nav class="header-actions" aria-label="Primary">
-        <a class="site-link" href="#how-it-works">How it works</a>
-        <a class="button button-header button-primary js-download" href="downloads/VolumeDuck.dmg" download>
-          <span class="button-label">Download</span>
-          <span class="button-meta">571 KB DMG</span>
+      <nav class="header-nav" aria-label="Primary">
+        <a class="nav-link" href="#faqs">FAQs</a>
+        <a class="button button-download js-download" href="downloads/VolumeDuck-v1.0.dmg" download>
+          <svg class="apple-icon" width="20" height="20" viewBox="0 0 814 1000" fill="currentColor" aria-hidden="true">
+            <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105.6-57.8-155.5-127.4c-58.3-81.3-105.9-207.9-105.9-328.7 0-193.3 125.7-296 249.3-296 65.8 0 120.6 43.3 161.8 43.3 39.2 0 100.4-45.8 175.1-45.8 28.3 0 130 2.5 197.3 95.6zm-271.8-88.5c31.8-37.6 54.2-89.8 54.2-142 0-7.3-.7-14.5-2-21.3-51.7 1.9-112.5 34.5-149.4 77.8-26.3 30.5-55.4 82.7-55.4 135.8 0 8 1.3 16 1.9 18.5 3.2.6 8.4 1.3 13.6 1.3 46.4 0 104.8-31.1 137.1-70.1z"/>
+          </svg>
+          <span>Download free</span>
         </a>
       </nav>
     </header>
 
-    <main id="top" class="main-layout">
-      <section class="hero reveal">
+    <main>
+      <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Built for dictation on macOS</p>
-          <h1>Lower your audio while you talk.</h1>
-          <p class="hero-text">
-            Volume Duck sits in your menu bar and automatically ducks your Mac's
-            volume while you hold your dictation hotkey. Let go, and your audio
-            fades smoothly back in.
+          <h1><span class="text-orange">Speak up.</span><br>Volume down.</h1>
+          <p class="hero-description">
+            A tiny menu bar app for MacOS that smoothly
+            ducks your volume during dictation without
+            breaking your music or podcast flow.
           </p>
+          <a class="button button-download js-download" href="downloads/VolumeDuck-v1.0.dmg" download>
+            <svg class="apple-icon" width="20" height="20" viewBox="0 0 814 1000" fill="currentColor" aria-hidden="true">
+              <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105.6-57.8-155.5-127.4c-58.3-81.3-105.9-207.9-105.9-328.7 0-193.3 125.7-296 249.3-296 65.8 0 120.6 43.3 161.8 43.3 39.2 0 100.4-45.8 175.1-45.8 28.3 0 130 2.5 197.3 95.6zm-271.8-88.5c31.8-37.6 54.2-89.8 54.2-142 0-7.3-.7-14.5-2-21.3-51.7 1.9-112.5 34.5-149.4 77.8-26.3 30.5-55.4 82.7-55.4 135.8 0 8 1.3 16 1.9 18.5 3.2.6 8.4 1.3 13.6 1.3 46.4 0 104.8-31.1 137.1-70.1z"/>
+            </svg>
+            <span>Download free</span>
+          </a>
+        </div>
 
-          <div class="cta-row">
-            <a class="button button-primary js-download" href="downloads/VolumeDuck.dmg" download>
-              <span class="button-label">Download Volume Duck</span>
-              <span class="button-meta">direct DMG</span>
-            </a>
-            <a class="button button-secondary" href="#setup">Setup notes</a>
+        <div class="hero-image">
+          <img
+            src="assets/VolumeDuck-hero-image.png"
+            alt="Volume Duck app window showing controls for duck level, fade, hotkey, and launch at login"
+          >
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="feature">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="14" height="14" rx="3"/>
+              <rect x="22" y="4" width="14" height="14" rx="3"/>
+              <rect x="4" y="22" width="14" height="14" rx="3"/>
+              <rect x="22" y="22" width="14" height="14" rx="3"/>
+              <line x1="36" y1="29" x2="40" y2="29"/>
+              <line x1="29" y1="36" x2="29" y2="40"/>
+              <circle cx="36" cy="36" r="3"/>
+            </svg>
           </div>
+          <h3>Widely<br>compatible</h3>
+        </div>
 
-          <p class="microcopy">
-            Tiny download. No sign-up. No app store ceremony.
-          </p>
-
-          <div class="hero-facts" aria-label="Quick facts">
-            <article class="fact-card">
-              <span class="fact-label">Format</span>
-              <strong>DMG download</strong>
-              <span>Single-file installer</span>
-            </article>
-            <article class="fact-card">
-              <span class="fact-label">Footprint</span>
-              <strong>571 KB</strong>
-              <span>Stays out of the way</span>
-            </article>
-            <article class="fact-card">
-              <span class="fact-label">Best with</span>
-              <strong>Built-in audio</strong>
-              <span>Current software ducking target</span>
-            </article>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="2" width="8" height="36" rx="4"/>
+              <rect x="24" y="10" width="8" height="20" rx="4"/>
+              <circle cx="12" cy="28" r="2.5" fill="currentColor"/>
+              <circle cx="28" cy="20" r="2.5" fill="currentColor"/>
+            </svg>
           </div>
+          <h3>Customisable<br>duck &amp; fade</h3>
         </div>
 
-        <div class="hero-visual">
-          <div class="preview-shell" data-tilt-card>
-            <div class="preview-orbit preview-orbit-a"></div>
-            <div class="preview-orbit preview-orbit-b"></div>
-
-            <div class="floating-chip">
-              <img
-                src="assets/volume-duck-icon.png"
-                alt=""
-                width="56"
-                height="56"
-              >
-              <div>
-                <span class="chip-title">Volume Duck</span>
-                <span class="chip-text">Hold a key. The room ducks.</span>
-              </div>
-            </div>
-
-            <figure class="preview-frame">
-              <img
-                src="assets/volume-duck-preview.png"
-                alt="Volume Duck app window with controls for duck level, fade, hotkey, and launch at login"
-                width="800"
-                height="1000"
-              >
-            </figure>
+        <div class="feature">
+          <div class="feature-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="6" width="28" height="22" rx="3"/>
+              <line x1="14" y1="28" x2="26" y2="28"/>
+              <line x1="16" y1="32" x2="24" y2="32"/>
+            </svg>
           </div>
+          <h3>Menu bar<br>application</h3>
         </div>
       </section>
 
-      <section class="proof-strip reveal" aria-label="Why people would use Volume Duck">
-        <article class="proof-card">
-          <span class="proof-number">01</span>
-          <h2>No more reaching for volume</h2>
-          <p>Keep music, podcasts, or reference audio playing without manually turning everything down every time you speak.</p>
-        </article>
-        <article class="proof-card">
-          <span class="proof-number">02</span>
-          <h2>Tuned for the menu bar</h2>
-          <p>Set it once, leave it running, and bring it up only when you want to tweak the hotkey or fade timing.</p>
-        </article>
-        <article class="proof-card">
-          <span class="proof-number">03</span>
-          <h2>Made for one job</h2>
-          <p>Duck level, fade timing, launch at login, and a recordable hotkey. Nothing bloated around it.</p>
-        </article>
-      </section>
+      <div class="cta-bottom">
+        <a class="button button-download js-download" href="downloads/VolumeDuck-v1.0.dmg" download>
+          <svg class="apple-icon" width="20" height="20" viewBox="0 0 814 1000" fill="currentColor" aria-hidden="true">
+            <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105.6-57.8-155.5-127.4c-58.3-81.3-105.9-207.9-105.9-328.7 0-193.3 125.7-296 249.3-296 65.8 0 120.6 43.3 161.8 43.3 39.2 0 100.4-45.8 175.1-45.8 28.3 0 130 2.5 197.3 95.6zm-271.8-88.5c31.8-37.6 54.2-89.8 54.2-142 0-7.3-.7-14.5-2-21.3-51.7 1.9-112.5 34.5-149.4 77.8-26.3 30.5-55.4 82.7-55.4 135.8 0 8 1.3 16 1.9 18.5 3.2.6 8.4 1.3 13.6 1.3 46.4 0 104.8-31.1 137.1-70.1z"/>
+          </svg>
+          <span>Download free</span>
+        </a>
+      </div>
 
-      <section class="workflow reveal" id="how-it-works">
-        <div class="section-heading">
-          <p class="eyebrow">How it works</p>
-          <h2>Hold the key you already use to dictate, and let the app do the rest.</h2>
-        </div>
-
-        <div class="workflow-layout">
-          <ol class="workflow-steps">
-            <li>
-              <span class="step-index">1</span>
-              <div>
-                <h3>Choose your hotkey</h3>
-                <p>Use a single key or a compact combo and record it directly from the app.</p>
-              </div>
-            </li>
-            <li>
-              <span class="step-index">2</span>
-              <div>
-                <h3>Set your duck amount</h3>
-                <p>Bring your output down gently or almost all the way, depending on how strong you want the dip to feel.</p>
-              </div>
-            </li>
-            <li>
-              <span class="step-index">3</span>
-              <div>
-                <h3>Adjust the fade</h3>
-                <p>Pick how quickly audio drops and returns so the transition feels smooth instead of abrupt.</p>
-              </div>
-            </li>
-          </ol>
-
-          <aside class="workflow-panel">
-            <p class="panel-label">Inside the app</p>
-            <ul class="panel-list">
-              <li><code>Duck to</code> lets you choose the target volume percentage.</li>
-              <li><code>Fade</code> controls how fast the volume ramps down and back up.</li>
-              <li><code>Launch at Login</code> keeps it ready whenever you start your Mac.</li>
-              <li><code>Record</code> captures the key combo you want to use for dictation.</li>
-            </ul>
-          </aside>
+      <section class="faqs" id="faqs">
+        <h2>FAQs</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What does Volume Duck do?</summary>
+            <p>Volume Duck automatically lowers your Mac's audio output when you hold your dictation hotkey, then smoothly fades it back in when you release. It's perfect for keeping music or podcasts playing while you dictate.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does it work with external audio devices?</summary>
+            <p>No, it does not currently work with external audio devices, though we are actively working on an implementation to enable this. It is proving to be more difficult than anticipated.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What permissions does it need?</summary>
+            <p>macOS will ask for Input Monitoring or Accessibility permission so the app can listen for your hotkey. Just grant the permission and reopen the app if needed.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is it free?</summary>
+            <p>Yes, Volume Duck is completely free to download and use.</p>
+          </details>
         </div>
       </section>
 
-      <section class="features reveal" id="features">
-        <div class="section-heading">
-          <p class="eyebrow">What you can tune</p>
-          <h2>Everything on the page maps directly to a control in the app.</h2>
+      <footer class="site-footer">
+        <div class="social-links">
+          <a href="https://x.com/thorne_davis" aria-label="X (Twitter)" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/thorne-davis" aria-label="GitHub" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://thornedavis.com" aria-label="Website" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </a>
         </div>
-
-        <div class="feature-grid">
-          <article class="feature-card">
-            <p class="feature-kicker">Duck Level</p>
-            <h3>Set the exact target volume</h3>
-            <p>Go subtle for background listening or drag it lower when you want dictation to cut through clearly.</p>
-          </article>
-
-          <article class="feature-card">
-            <p class="feature-kicker">Fade Timing</p>
-            <h3>Make transitions feel natural</h3>
-            <p>Fast enough to be useful, smooth enough not to sound like the audio is being chopped off.</p>
-          </article>
-
-          <article class="feature-card">
-            <p class="feature-kicker">Hotkey</p>
-            <h3>Fits your dictation habit</h3>
-            <p>Use whatever key or small combo already makes sense in your workflow instead of relearning a system.</p>
-          </article>
-
-          <article class="feature-card">
-            <p class="feature-kicker">Launch at Login</p>
-            <h3>Ready every time you sit down</h3>
-            <p>Leave it on and the app is there the moment you start your Mac, without taking up dock space.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="setup reveal" id="setup">
-        <div class="section-heading">
-          <p class="eyebrow">Before you install</p>
-          <h2>A fast setup, plus two things worth knowing up front.</h2>
-        </div>
-
-        <div class="setup-layout">
-          <ol class="setup-steps">
-            <li>
-              <strong>Download and open the DMG.</strong>
-              Drag Volume Duck into your Applications folder.
-            </li>
-            <li>
-              <strong>Grant the keyboard permission macOS asks for.</strong>
-              Depending on your macOS version, that will be Input Monitoring or Accessibility.
-            </li>
-            <li>
-              <strong>Record your hotkey and set your fade.</strong>
-              After that, the app is basically out of your way.
-            </li>
-          </ol>
-
-          <aside class="compatibility-card">
-            <p class="compatibility-label">Good to know</p>
-            <p class="compatibility-copy">
-              Volume Duck is currently best with your Mac's built-in output. Some
-              external devices may not support software ducking yet.
-            </p>
-            <p class="compatibility-copy">
-              If macOS blocks key listening at first, just grant the requested
-              permission and reopen the app.
-            </p>
-            <a class="button button-primary button-inline js-download" href="downloads/VolumeDuck.dmg" download>
-              <span class="button-label">Get Volume Duck</span>
-              <span class="button-meta">download the DMG</span>
-            </a>
-          </aside>
-        </div>
-      </section>
-
-      <section class="final-cta reveal" aria-label="Final call to action">
-        <div class="final-cta-card">
-          <div>
-            <p class="eyebrow">Ready when you are</p>
-            <h2>Install it in a minute and stop riding your volume keys.</h2>
-          </div>
-
-          <div class="final-cta-actions">
-            <a class="button button-primary js-download" href="downloads/VolumeDuck.dmg" download>
-              <span class="button-label">Download the DMG</span>
-              <span class="button-meta">571 KB</span>
-            </a>
-            <a class="button button-secondary" href="https://x.com/thorne_davis">Made by @thorne_davis</a>
-          </div>
-        </div>
-      </section>
+      </footer>
     </main>
 
-    <footer class="site-footer">
-      <p>Made with care by <a href="https://x.com/thorne_davis">Thorne Davis</a>.</p>
-      <p>&copy; <span data-year></span> Volume Duck.</p>
-    </footer>
+    <div class="watermark" aria-hidden="true">VolumeDuck</div>
   </body>
 </html>
