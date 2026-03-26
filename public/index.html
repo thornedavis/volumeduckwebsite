@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Volume Duck | Duck your Mac volume while you dictate</title>
+    <title>Volume Duck | Lower your Mac volume while you dictate</title>
     <meta
       name="description"
-      content="Volume Duck is a tiny macOS menu bar app that lowers your audio while you dictate, then fades it smoothly back in when you are done."
+      content="Volume Duck is a tiny macOS menu bar app that ducks your Mac audio while you hold your dictation hotkey, then fades everything back in when you stop."
     >
     <meta property="og:title" content="Volume Duck">
     <meta
       property="og:description"
-      content="A tiny macOS menu bar app that ducks your volume while you dictate."
+      content="A tiny macOS menu bar app that lowers your audio while you dictate."
     >
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://volumeduck.com/">
@@ -21,6 +21,7 @@
       document.documentElement.classList.add("js");
     </script>
     <link rel="icon" type="image/png" href="assets/volume-duck-icon.png">
+    <link rel="apple-touch-icon" href="assets/volume-duck-icon.png">
     <link rel="preload" as="image" href="assets/volume-duck-preview.png">
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
@@ -47,38 +48,55 @@
         </div>
       </a>
 
-      <a class="site-link" href="https://x.com/thorne_davis">by @thorne_davis</a>
+      <nav class="header-actions" aria-label="Primary">
+        <a class="site-link" href="#how-it-works">How it works</a>
+        <a class="button button-header button-primary js-download" href="downloads/VolumeDuck.dmg" download>
+          <span class="button-label">Download</span>
+          <span class="button-meta">571 KB DMG</span>
+        </a>
+      </nav>
     </header>
 
     <main id="top" class="main-layout">
       <section class="hero reveal">
         <div class="hero-copy">
-          <p class="eyebrow">Duck the room. Keep dictation clear.</p>
-          <h1>Speak up. Your Mac will handle the volume.</h1>
+          <p class="eyebrow">Built for dictation on macOS</p>
+          <h1>Lower your audio while you talk.</h1>
           <p class="hero-text">
-            Volume Duck sits in your menu bar and smoothly lowers your Mac audio
-            the moment you hold your dictation hotkey. Let go, and your sound
-            glides right back in.
+            Volume Duck sits in your menu bar and automatically ducks your Mac's
+            volume while you hold your dictation hotkey. Let go, and your audio
+            fades smoothly back in.
           </p>
 
           <div class="cta-row">
             <a class="button button-primary js-download" href="downloads/VolumeDuck.dmg" download>
-              <span class="button-label">Download the DMG</span>
-              <span class="button-meta">for macOS</span>
+              <span class="button-label">Download Volume Duck</span>
+              <span class="button-meta">direct DMG</span>
             </a>
-            <a class="button button-secondary" href="#setup">See setup notes</a>
+            <a class="button button-secondary" href="#setup">Setup notes</a>
           </div>
 
           <p class="microcopy">
-            Tiny direct download. No sign-up. No dock clutter.
+            Tiny download. No sign-up. No app store ceremony.
           </p>
 
-          <ul class="hero-pills" aria-label="Volume Duck highlights">
-            <li>Custom hotkey combos</li>
-            <li>Smooth fade timing</li>
-            <li>Launch at login</li>
-            <li>Built for internal Mac audio</li>
-          </ul>
+          <div class="hero-facts" aria-label="Quick facts">
+            <article class="fact-card">
+              <span class="fact-label">Format</span>
+              <strong>DMG download</strong>
+              <span>Single-file installer</span>
+            </article>
+            <article class="fact-card">
+              <span class="fact-label">Footprint</span>
+              <strong>571 KB</strong>
+              <span>Stays out of the way</span>
+            </article>
+            <article class="fact-card">
+              <span class="fact-label">Best with</span>
+              <strong>Built-in audio</strong>
+              <span>Current software ducking target</span>
+            </article>
+          </div>
         </div>
 
         <div class="hero-visual">
@@ -95,7 +113,7 @@
               >
               <div>
                 <span class="chip-title">Volume Duck</span>
-                <span class="chip-text">Talk over anything playing.</span>
+                <span class="chip-text">Hold a key. The room ducks.</span>
               </div>
             </div>
 
@@ -111,99 +129,154 @@
         </div>
       </section>
 
-      <section class="signal-strip reveal" aria-label="How Volume Duck feels">
-        <article class="signal-card">
-          <span class="signal-index">01</span>
-          <h2>Hold your key</h2>
-          <p>Use a single key or a small combo to trigger ducking when you dictate.</p>
+      <section class="proof-strip reveal" aria-label="Why people would use Volume Duck">
+        <article class="proof-card">
+          <span class="proof-number">01</span>
+          <h2>No more reaching for volume</h2>
+          <p>Keep music, podcasts, or reference audio playing without manually turning everything down every time you speak.</p>
         </article>
-        <article class="signal-card">
-          <span class="signal-index">02</span>
-          <h2>Audio dips smoothly</h2>
-          <p>Choose exactly how low the volume goes and how fast it fades.</p>
+        <article class="proof-card">
+          <span class="proof-number">02</span>
+          <h2>Tuned for the menu bar</h2>
+          <p>Set it once, leave it running, and bring it up only when you want to tweak the hotkey or fade timing.</p>
         </article>
-        <article class="signal-card">
-          <span class="signal-index">03</span>
-          <h2>Then it returns</h2>
-          <p>Let go and your volume ramps back without the jarring bounce.</p>
+        <article class="proof-card">
+          <span class="proof-number">03</span>
+          <h2>Made for one job</h2>
+          <p>Duck level, fade timing, launch at login, and a recordable hotkey. Nothing bloated around it.</p>
         </article>
+      </section>
+
+      <section class="workflow reveal" id="how-it-works">
+        <div class="section-heading">
+          <p class="eyebrow">How it works</p>
+          <h2>Hold the key you already use to dictate, and let the app do the rest.</h2>
+        </div>
+
+        <div class="workflow-layout">
+          <ol class="workflow-steps">
+            <li>
+              <span class="step-index">1</span>
+              <div>
+                <h3>Choose your hotkey</h3>
+                <p>Use a single key or a compact combo and record it directly from the app.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-index">2</span>
+              <div>
+                <h3>Set your duck amount</h3>
+                <p>Bring your output down gently or almost all the way, depending on how strong you want the dip to feel.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-index">3</span>
+              <div>
+                <h3>Adjust the fade</h3>
+                <p>Pick how quickly audio drops and returns so the transition feels smooth instead of abrupt.</p>
+              </div>
+            </li>
+          </ol>
+
+          <aside class="workflow-panel">
+            <p class="panel-label">Inside the app</p>
+            <ul class="panel-list">
+              <li><code>Duck to</code> lets you choose the target volume percentage.</li>
+              <li><code>Fade</code> controls how fast the volume ramps down and back up.</li>
+              <li><code>Launch at Login</code> keeps it ready whenever you start your Mac.</li>
+              <li><code>Record</code> captures the key combo you want to use for dictation.</li>
+            </ul>
+          </aside>
+        </div>
       </section>
 
       <section class="features reveal" id="features">
         <div class="section-heading">
-          <p class="eyebrow">Why it feels good</p>
-          <h2>Made for one job, and made to stay out of the way.</h2>
+          <p class="eyebrow">What you can tune</p>
+          <h2>Everything on the page maps directly to a control in the app.</h2>
         </div>
 
         <div class="feature-grid">
           <article class="feature-card">
-            <h3>Lives quietly in the menu bar</h3>
-            <p>
-              No giant app window. No dashboard. Open it when you need it, then
-              forget it is there.
-            </p>
+            <p class="feature-kicker">Duck Level</p>
+            <h3>Set the exact target volume</h3>
+            <p>Go subtle for background listening or drag it lower when you want dictation to cut through clearly.</p>
           </article>
 
           <article class="feature-card">
-            <h3>Dial in the duck amount</h3>
-            <p>
-              Set the exact target volume for dictation, from a gentle dip to a
-              near mute.
-            </p>
+            <p class="feature-kicker">Fade Timing</p>
+            <h3>Make transitions feel natural</h3>
+            <p>Fast enough to be useful, smooth enough not to sound like the audio is being chopped off.</p>
           </article>
 
           <article class="feature-card">
-            <h3>Custom fade timing</h3>
-            <p>
-              Pick a fade that feels quick and invisible instead of abrupt and
-              distracting.
-            </p>
+            <p class="feature-kicker">Hotkey</p>
+            <h3>Fits your dictation habit</h3>
+            <p>Use whatever key or small combo already makes sense in your workflow instead of relearning a system.</p>
           </article>
 
           <article class="feature-card">
-            <h3>Hotkeys that fit your setup</h3>
-            <p>
-              Record a key or combo that matches how you already dictate on macOS.
-            </p>
+            <p class="feature-kicker">Launch at Login</p>
+            <h3>Ready every time you sit down</h3>
+            <p>Leave it on and the app is there the moment you start your Mac, without taking up dock space.</p>
           </article>
         </div>
       </section>
 
       <section class="setup reveal" id="setup">
         <div class="section-heading">
-          <p class="eyebrow">One-minute setup</p>
-          <h2>Download it, grant permission, and start talking.</h2>
+          <p class="eyebrow">Before you install</p>
+          <h2>A fast setup, plus two things worth knowing up front.</h2>
         </div>
 
         <div class="setup-layout">
           <ol class="setup-steps">
             <li>
-              <strong>Download the DMG.</strong>
-              Open it and drag Volume Duck into your Applications folder.
+              <strong>Download and open the DMG.</strong>
+              Drag Volume Duck into your Applications folder.
             </li>
             <li>
               <strong>Grant the keyboard permission macOS asks for.</strong>
-              Depending on your macOS version, that will be Input Monitoring or
-              Accessibility.
+              Depending on your macOS version, that will be Input Monitoring or Accessibility.
             </li>
             <li>
-              <strong>Record your dictation hotkey.</strong>
-              Set your duck level, tweak the fade, and you are ready.
+              <strong>Record your hotkey and set your fade.</strong>
+              After that, the app is basically out of your way.
             </li>
           </ol>
 
           <aside class="compatibility-card">
             <p class="compatibility-label">Good to know</p>
             <p class="compatibility-copy">
-              Volume Duck is currently tuned for your Mac's built-in output. If
-              you swap to some external audio devices, software ducking may not
-              be available yet.
+              Volume Duck is currently best with your Mac's built-in output. Some
+              external devices may not support software ducking yet.
+            </p>
+            <p class="compatibility-copy">
+              If macOS blocks key listening at first, just grant the requested
+              permission and reopen the app.
             </p>
             <a class="button button-primary button-inline js-download" href="downloads/VolumeDuck.dmg" download>
               <span class="button-label">Get Volume Duck</span>
-              <span class="button-meta">single-file DMG</span>
+              <span class="button-meta">download the DMG</span>
             </a>
           </aside>
+        </div>
+      </section>
+
+      <section class="final-cta reveal" aria-label="Final call to action">
+        <div class="final-cta-card">
+          <div>
+            <p class="eyebrow">Ready when you are</p>
+            <h2>Install it in a minute and stop riding your volume keys.</h2>
+          </div>
+
+          <div class="final-cta-actions">
+            <a class="button button-primary js-download" href="downloads/VolumeDuck.dmg" download>
+              <span class="button-label">Download the DMG</span>
+              <span class="button-meta">571 KB</span>
+            </a>
+            <a class="button button-secondary" href="https://x.com/thorne_davis">Made by @thorne_davis</a>
+          </div>
         </div>
       </section>
     </main>
